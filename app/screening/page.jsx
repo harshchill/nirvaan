@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 const QUESTIONS = [
   {
     id: "q1",
-    text: "Over the last 2 weeks, how often have you felt little interest or pleasure in doing things?",
+    text: "Over the last 2 weeks, how often have you had little interest or pleasure in doing things?",
   },
   {
     id: "q2",
@@ -12,12 +12,31 @@ const QUESTIONS = [
   },
   {
     id: "q3",
-    text: "How often have you felt nervous, anxious, or on edge?",
+    text: "Over the last 2 weeks, how often have you had trouble falling or staying asleep, or sleeping too much?",
   },
-  { id: "q4", text: "How often have you had trouble relaxing?" },
+  {
+    id: "q4",
+    text: "Over the last 2 weeks, how often have you felt tired or had little energy?",
+  },
   {
     id: "q5",
-    text: "How often have you felt bad about yourself or felt like a failure?",
+    text: "Over the last 2 weeks, how often have you had poor appetite or overeating?",
+  },
+  {
+    id: "q6",
+    text: "Over the last 2 weeks, how often have you felt bad about yourself — or that you are a failure or have let yourself or your family down?",
+  },
+  {
+    id: "q7",
+    text: "Over the last 2 weeks, how often have you had trouble concentrating on things, such as reading the newspaper or watching television?",
+  },
+  {
+    id: "q8",
+    text: "Over the last 2 weeks, how often have you been moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual?",
+  },
+  {
+    id: "q9",
+    text: "Over the last 2 weeks, how often have you had thoughts that you would be better off dead, or of hurting yourself in some way?",
   },
 ];
 
