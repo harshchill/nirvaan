@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎓 Nirvaan
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-13-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4.4-green?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
-First, run the development server:
+> A modern platform connecting students with counsellors and educational institutions for better academic guidance and support.
 
+![Nirvaan Hero](public/Hero.png)
+
+## ✨ Features
+
+- 🔐 **Secure Authentication** - Robust user authentication system
+- 💬 **Interactive Chat** - Real-time communication between students and counsellors
+- 🏛️ **Institution Forums** - Dedicated discussion spaces for educational institutions
+- 📋 **Screening Process** - Comprehensive student assessment system
+- 🌐 **Resource Center** - Educational resources and materials
+- 👥 **Counsellor Network** - Connect with professional academic counsellors
+- 🎯 **Profile Management** - Detailed user and institution profiles
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 16.x or later
+- MongoDB database
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/harshchill/nirvaan.git
+cd nirvaan
+```
+
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Set up environment variables
+```bash
+# Create a .env.local file and add the following
+MONGODB_URI=your_mongodb_connection_string
+NEXTAUTH_SECRET=your_auth_secret
+NEXTAUTH_URL=http://localhost:3000
+```
+
+4. Start the development server
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to see the application.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🏗️ Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+nirvaan/
+├── app/                    # Next.js 13 app directory
+│   ├── api/               # API routes
+│   ├── chat/             # Chat functionality
+│   ├── Components/       # Reusable components
+│   ├── counsellor/      # Counsellor pages
+│   └── forum/           # Forum functionality
+├── lib/                  # Utility functions
+├── models/              # MongoDB models
+└── public/              # Static assets
+```
 
-## Learn More
+## 💡 Core Features Explained
 
-To learn more about Next.js, take a look at the following resources:
+### Authentication System
+Secure user authentication powered by NextAuth.js, supporting multiple authentication methods and session management.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Chat System
+Real-time communication platform enabling direct interaction between students and counsellors, built with modern streaming technologies.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Institution Forums
+Dedicated spaces for educational institutions to host discussions, share updates, and engage with students.
 
-## Deploy on Vercel
+### Resource Center
+Comprehensive collection of educational materials, guides, and resources to support student success.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ Built With
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js 13](https://nextjs.org/) - React framework
+- [MongoDB](https://www.mongodb.com/) - Database
+- [NextAuth.js](https://next-auth.js.org/) - Authentication
+- [TailwindCSS](https://tailwindcss.com/) - Styling
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙌 Acknowledgments
+
+- The Next.js team for the amazing framework
+- All contributors who have helped shape Nirvaan
+- The open-source community for their invaluable tools and libraries
+
+---
+
+<p align="center">Made with ❤️ by the Nirvaan team</p>
