@@ -39,6 +39,7 @@ export const authOptions = {
           if (gmail) {
             const existing = await User.findOne({ gmail }).lean();
             token.role = existing?.role || "user";
+            token.email = gmail; // Ensure email is preserved in token
           }
         }
         // Fallback to default if somehow missing
@@ -50,9 +51,11 @@ export const authOptions = {
       return token;
     },
     async session({ session, token }) {
-      // Expose role on session for client usage
+      // Expose role and email on session for client usage
       if (session?.user) {
         session.user.role = token?.role || "user";
+        session.user.email = token?.email || session.user.email;
+        console.log(session.user.email)
       }
       return session;
     },

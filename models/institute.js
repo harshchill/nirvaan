@@ -42,12 +42,20 @@ const instituteSchema = new mongoose.Schema(
       country: { type: String, trim: true },
       postalCode: { type: String, trim: true },
     },
+    // Add Stream channel information
+    streamChannelId: {
+      type: String,
+      unique: true,
+      sparse: true,
+    },
+    // Track forum members
+    forumMembers: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    }],
   },
   { timestamps: true }
 );
 
 const Institute = mongoose.models.Institute || mongoose.model("Institute", instituteSchema);
 export default Institute;
-
-
-
