@@ -40,5 +40,41 @@ html, body {
   .btn-primary:hover { filter: brightness(0.98); }
   .btn-ghost { @apply text-gray-700 hover:bg-gray-100; }
   .ring-focus { box-shadow: 0 0 0 4px color-mix(in oklab, var(--ring), transparent 70%); }
+
+  /* Modern homepage helpers */
+  .divider-soft {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(31,41,55,0.12), transparent);
+  }
+
+  .title-accent {
+    position: relative;
+  }
+  .title-accent::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 84px;
+    height: 3px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, var(--brand), var(--accent));
+  }
+
+  .hover-card {
+    transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  }
+  .hover-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.07);
+    border-color: color-mix(in oklab, var(--brand-strong), #000 10%);
+  }
+
+  .subtle-grid {
+    background-image:
+      linear-gradient(to right, rgba(31,41,55,0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(31,41,55,0.06) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
 }
 

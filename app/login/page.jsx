@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function LoginPage() {
   async function loginGoogle() {
-    await signIn("google", { callbackUrl: "/" });
+    await signIn("google", { callbackUrl: "/dashboard" });
   }
 
   return (

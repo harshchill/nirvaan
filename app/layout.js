@@ -3,6 +3,8 @@ import "./globals.css";
 import SiteHeader from "./ui/SiteHeader";
 import SiteFooter from "./ui/SiteFooter";
 import Providers from "./Components/providers";
+import GlobalChatWidget from "./Components/GlobalChatWidget";
+import GlobalBookingWidget from "./Components/GlobalBookingWidget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +30,8 @@ export default function RootLayout({ children }) {
             <SiteHeader />
             <main className="flex-1 container-max py-10">{children}</main>
             <SiteFooter />
+            <GlobalChatWidget />
+            <GlobalBookingWidget />
           </div>
         </Providers>
       </body>
