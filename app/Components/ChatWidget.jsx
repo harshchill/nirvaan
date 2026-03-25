@@ -42,15 +42,12 @@ export default function ChatWidget({
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            messages: [...messages, userMsg],
-            model: "llama-3.3-70b-versatile",
-            temperature: 0.5,
-            max_tokens: 500,
+            message: trimmed,
           }),
         });
         if (!res.ok) throw new Error("Request failed");
         const data = await res.json();
-        const assistantText = data?.reply ?? "I'm here and listening.";
+        const assistantText = data?.response ?? "I'm here and listening.";
         setMessages((prev) => [
           ...prev,
           {

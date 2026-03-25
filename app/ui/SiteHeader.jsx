@@ -8,6 +8,7 @@ const links = [
   { href: "/universities", label: "Universities" },
   { href: "/resources", label: "Resources" },
   { href: "/screening", label: "Screening" },
+  { href: "/admin", label: "Admin" },
 ];
 
 export default function SiteHeader() {
